@@ -9,9 +9,11 @@ def index():
      """
      pitches= Pitches.query.all()
      users =User.query.all()
+     religion = Pitches.query.filter_by(category= 'religion').all()
+     food = Pitches.query.filter_by(category= 'food').all()      
+     sports = Pitches.query.filter_by(category= 'sports').all()  
+     music = Pitches.query.filter_by(category= 'music').all()  
      
      
-     
-     
-     return render_template('index.html',)
+     return render_template('index.html',pitches=pitches, users=users,religion=religion,food=food,sports=sports,music=music)
  
