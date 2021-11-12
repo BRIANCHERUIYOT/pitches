@@ -6,9 +6,9 @@ from datetime import datetime
 
 
 
-@login_manager.use_loader
+@login_manager.user_loader
 def load_user(user_id):
-    return User.query.get(int(user_id))
+        return User.query.get(user_id)
 
 
 

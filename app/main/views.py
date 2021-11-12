@@ -1,11 +1,17 @@
 from flask import render_template
 from . import main 
+from models import Pitches,User
 
 @main.route('/')
 def index():
      """
      view route page function
      """
-     title='pitches'
-     return render_template('index.html',title=title)
+     pitches= Pitches.query.all()
+     users =User.query.all()
+     
+     
+     
+     
+     return render_template('index.html',)
  

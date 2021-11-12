@@ -2,7 +2,7 @@ class Config:
     """
     parent configurations class
     """
-    SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2:// moringa: access@localhost/pitches'
+    SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://moringa:access@localhost/pitches'
     SECRET_KEY = "brian"
     DEBUG = True
 
