@@ -19,6 +19,9 @@ class Pitches(db.Model):
     description = db.Column(db.String(255))
     category= db.Column(db.String)
     date_posted = db.Column(db.DateTime,default=datetime.utcnow)
+    user_id = db.Column(db.Integer,db.ForeignKey("users.id"))
+    
+    comments = db.relationship('Comment',backref =  'pitch_id',lazy = "dynamic")
     
 def save_pitches(self):
     db.session.add(self)
