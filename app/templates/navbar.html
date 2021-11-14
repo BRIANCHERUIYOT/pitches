@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+{% import 'macros.html' as macro %}
+
+{%block styles%}
+<link href="https://fonts.googleapis.com/css?family=Frank+Ruhl+Libre|Josefin+Slab|Righteous|Srisakdi&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+
+{%endblock%}
+
+<nav class="navbar navbar-expand-lg navbar-light bg-success">
+    <a class="navbar-brand" href="#">pitch</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+      <ul class="navbar-nav">
+
+
+          <a class="dropdown-item" href="{{url_for('auth.login')}}">Login</a>
+
+          <a class="dropdown-item" href="{{url_for('auth.register')}}">Sign up</a>
+          
+          <a class="dropdown-item" href="{{url_for('main.new_pitch')}}">Create pitch</a>
+
+       
+      </ul>
+    </div>
+  </nav>

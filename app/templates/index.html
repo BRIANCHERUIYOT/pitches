@@ -1,1 +1,53 @@
-<h1>welcome to my pitches</h1>
+{% extends 'base.html' %}
+{% import 'macros.html' as macro %}
+<!-- Styles block -->
+
+
+{%block styles%}
+<link href="https://fonts.googleapis.com/css?family=Frank+Ruhl+Libre|Josefin+Slab|Righteous|Srisakdi&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+{{super()}}
+
+{%endblock%}
+<!-- Content block -->
+{%block content%}
+
+<div class="container mt-5 text-center">
+    <h1>1 minute of amaizing Pitches</h1>
+
+    
+  <div class="row">
+  <div class="col-sm-4">
+    <div class="card text-white bg-dark mb-3">
+      <div class="card-body">
+         <h3>Religion Pitches</h3>
+        <a href="{{url_for('main.religion_pitches')}}" class="btn btn-success -center">View</a>
+      </div>
+    </div>
+  </div>
+  <div class="col-sm-4">
+      <div class="card text-white bg-dark">
+      <div class="card-body">
+        <h3>Music Pitches</h3>
+        <a href="{{url_for('main.music_pitches')}}" class="btn btn-success -center">View</a>
+      </div>
+    </div>
+  </div>
+    <div class="col-sm-4">
+     <div class="card text-white bg-dark ">
+     <div class="card-body">
+         <h3>Sports Pitches</h3>
+        <a href="{{url_for('main.sports_pitches')}}" class="btn btn-success text-center">View</a>
+      </div>
+    </div>
+  </div>
+</div>
+ <a href="{{url_for('main.new_pitch')}}" class="btn btn-primary">CREATE NEW PITCH</a>
+
+</div>
+
+
+
+
+{%endblock%}

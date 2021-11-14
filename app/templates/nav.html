@@ -1,0 +1,36 @@
+
+
+
+
+{%block content%}
+
+    <div class="nav  mt-5 text-white bg-success" role="navigation">
+        <div class="container-fluid row navbar bg-dark   ">
+            <ul class="nav text-white " style="margin-top: 2rem; color: white; ">
+                <li><a href="/">HOME</a></li>
+                <li><a href="{{url_for('main.religion_pitches')}}">RELIGION</a></li>
+                <li><a href="{{url_for('main.music_pitches')}}">MUSIC</a></li>
+                <li class="text-white"><a href="{{url_for('main.sports_pitches')}}">SPORTS</a></li>
+            </ul>
+
+            <div>
+            <ul class=" row nav  navbar-right" style="margin-top: 2rem;">
+                {% if current_user.is_authenticated %}
+                <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
+                        aria-haspopup="true" aria-expanded="false">{{current_user.username| capitalize}} <span
+                            class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="{{url_for('main.user_pitches',uname=current_user.username)}}">My Pitches</a></li>
+                        <li role="separator" class="divider"></li>
+                        <li><a href="{{url_for('auth.logout')}}">Sign out</a></li>
+                    </ul>
+                </li>
+                {% else %}
+                <li><a href="{{url_for('auth.login')}}">Sign in</a></li>
+            </ul>
+            {%endif%}
+        </div>
+    </div>
+
+</div>
+{%endblock%}
