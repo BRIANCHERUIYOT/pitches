@@ -8,7 +8,7 @@ from app.models import User
 
 app=create_app('test') 
 
-app=create_app('development')
+app=create_app('production')
 
 
 manager = Manager(app)
