@@ -1,2 +1,2 @@
 Hello {{user.username}} Welcome
-share your greatness
+now share your greatness

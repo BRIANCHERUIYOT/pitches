@@ -6,7 +6,7 @@ from app.models import User
 
 # creating app instances
 
-app = create_app('development')
+app = create_app('production')
 
 
 manager = Manager(app)
